@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "8e5ec64a-992a-46eb-803b-15b19bf23388",
+		"name": "EmailParser",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12614092"
+	},
+	"item": [
+		{
+			"name": "Get Attachment From Body",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"path\": \"/Users/edwinmorales/Desktop/Test - Attachment.eml\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/parser/from-attachment",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"parser",
+						"from-attachment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Attachment From Body",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"path\": \"/Users/edwinmorales/Desktop/Test-body.eml\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/parser/from-body",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"parser",
+						"from-body"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Attachment From Website",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"path\": \"/Users/edwinmorales/Desktop/Test-website.eml\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/parser/from-website",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"parser",
+						"from-website"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
